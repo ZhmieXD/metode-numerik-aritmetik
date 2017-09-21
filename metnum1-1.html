@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<title>Metode Numerik : Perhitungan Aritmatik</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var aIn = prompt("Masukkan Bilangan A : ", "");
+			var bIn = prompt("Masukkan Bilangan B : ", "");
+			var menuIn = prompt("Pilih Operasi yang diinginkan : \n1. Penjumlahan (A+B)\n2. Pengurangan (A-B)\n3. Perkalian (A x B)\n4. Pembagian (A / B)\n5. Perpangkatan (A ^ B)\n6. Deret Fungsi (f(x) = 2x^2-4x+1 dari A ke B)", "");
+			
+			var a = parseInt(aIn);
+			var b = parseInt(bIn);
+			var menu = parseInt(menuIn);
+			
+			document.write("<b>Bilangan yang anda masukkan : </b><br/><br/>");
+			document.write("A : " + a +"<br/>");
+			document.write("B : " + b +"<br/>");
+			document.write("<br/>");
+			
+			switch(menu){
+				case 1 :
+					var tam = a + b;
+					document.write("<b>Penjumlahan (A+B) </b><br/><br/>");
+					document.write(a+" + "+b+" = "+ tam +"<br/>");
+					document.write("<br/>");
+					break;
+				case 2 :
+					var kur = a - b;
+					document.write("<b>Pengurangan (A-B) </b><br/><br/>");
+					document.write(a+" - "+b+" = "+ kur +"<br/>");
+					document.write("<br/>");
+					break;
+				case 3 :
+					var kal = a * b;
+					document.write("<b>Perkalian (A x B) </b><br/><br/>");
+					document.write(a+" x "+b+" = "+ kal +"<br/>");
+					document.write("<br/>");
+					break;
+				case 4 :
+					var bag = a / b;
+					document.write("<b>Pembagian (A / B) </b><br/><br/>");
+					document.write(a+" / "+b+" = "+ bag +"<br/>");
+					document.write("<br/>");
+					break;
+				case 5 :
+					var pkt = a ** b;
+					document.write("<b>Perpangkatan (A ^ B) </b><br/><br/>");
+					document.write(a+" ^ "+b+" = "+ pkt +"<br/>");
+					document.write("<br/>");
+					break;
+				case 6 :
+					var der;
+					document.write("<b>Deret Fungsi (f(x) = 2x^2-4x+1 dari A ke B) </b><br/><br/>");
+					for(var i = a; i <= b; i++){
+						der = 2 * (i ** 2) - 4 * i + 1;
+						document.write("f("+i+") = 2."+i+"^2-4."+i+"+1 : "+ der +"<br/>");
+					}
+					document.write("<br/>");
+					break;
+			}
+		</script>
+	</body>	
+</html>
